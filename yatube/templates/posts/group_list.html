@@ -1,23 +1,16 @@
 <!DOCTYPE html> <!-- Используется html 5 версии -->
 <html lang="ru"> <!-- Язык сайта - русский -->
   <head>
-     <title>Лев Толстой – зеркало русской революции.</title>
+    {% extends 'base.html' %}
+    <title>{{ title }}</title>
   </head>
   <body>
     <header>
       <!-- Использованы классы бустрапа для создания типовой навигации с логотипом -->
       <!-- В дальнейшем тут будет создано полноценное меню -->    
-      <nav class="navbar navbar-light" style="background-color: lightskyblue">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">
-            <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-            <!-- тег span используется для добавления нужных стилей отдельным участкам текста -->
-            <span style="color:red">Ya</span>tube</a>
-          </a>
-        </div>
-      </nav>      
     </header>
     <main>
+      {% block content %}
       <!-- класс py-5 создает отступы сверху и снизу блока -->
       <div class="container py-5">
         <h1>Лев Толстой – зеркало русской революции.</h1>
@@ -86,13 +79,13 @@
         </article>
         <!-- под последним постом нет линии -->
       </div>  
+      {% endblock %}
     </main>
     <!-- Использованы классы бустрапа: -->
     <!-- border-top: создаёт тонкую линию сверху блока -->
     <!-- text-center: выравнивает текстовые блоки внутри блока по центру -->
     <!-- py-3: контент внутри размещается с отступом сверху и снизу -->         
-    <footer class="border-top text-center py-3">
-      <!-- тег span используется для добавления нужных стилей отдельным участкам текста --> 
-      <p>© 2021 Copyright <span style="color:red">Ya</span>tube</p>    
-    </footer>
+    <footer >
+    </footer>  
+  
   </body>
