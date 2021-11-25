@@ -2,7 +2,9 @@
 <html lang="ru"> <!-- Язык сайта - русский -->
   <head>
     {% extends 'base.html' %}
-    <title>{{ title }}</title>    
+    {% block tit %}
+    <title>{{ title }}</title>  
+    {% endblock %}  
   </head>
    <body>
     <header>
