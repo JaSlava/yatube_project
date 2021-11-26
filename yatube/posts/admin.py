@@ -20,4 +20,4 @@ class GroupeAdmin(admin.ModelAdmin):
 # класс PostAdmin
 admin.site.register(Post, PostAdmin)  
 
-admin.site.register(Group, GroupeAdmin)
+admin.site.register(Group)
